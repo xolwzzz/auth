@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: key-auth-system
+    env: node
+    rootDir: auth
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: ADMIN_PASS
+        generateValue: true
+      - key: SECRET_KEY
+        generateValue: true
